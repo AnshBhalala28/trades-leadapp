@@ -4,6 +4,7 @@ class AppColors {
   // Existing Colors
 
   static const Color backGround = Color(0xFFF7F8FA);
+  static const Color backGround1 = Color(0xFFF7F8FA);
 
   
   static const Color primaryDarkBlue = Color(0xFF1B2850); 
