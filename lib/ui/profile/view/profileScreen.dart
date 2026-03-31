@@ -25,7 +25,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             fontSize: 15.sp,
           ),
         ),
-         SizedBox(height: 1.h),
+        SizedBox(height: 1.h),
         Text(
           title,
           style: TextStyle(
@@ -67,15 +67,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       backgroundColor: const Color(0xffF5F6FA),
       body: Column(
         children: [
-          SizedBox(height: 5.h,),
-       TitleBar(title: "title",
-       isBackEnabled: true,
+          SizedBox(height: 5.h),
+          TitleBar(title: "title", isBackEnabled: true),
 
-       ),
-
-
-
-           SizedBox(height: 2.h),
+          SizedBox(height: 2.h),
 
           const CircleAvatar(
             radius: 40,
@@ -150,7 +145,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         currentIndex: 2,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
-        items:  [
+        items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tradesleadapp/ui/auth/view/LoginScreen.dart';
-import 'package:tradesleadapp/ui/auth/view/SinupScreen.dart';
-import 'package:tradesleadapp/ui/profile/view/profileScreen.dart';
-import 'package:tradesleadapp/ui/testingScreen.dart';
+import 'package:tradesleadapp/ui/requestQuote/view/requestQuote.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             primarySwatch: Colors.blue,
           ),
-          home: ProfileScreen(),
+          home: RequestQuoteScreen(),
 
         );
       },

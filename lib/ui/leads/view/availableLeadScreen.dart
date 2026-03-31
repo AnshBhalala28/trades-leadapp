@@ -1,0 +1,494 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_utils/src/extensions/export.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
+import 'package:tradesleadapp/utils/customAppBar.dart';
+import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/importantStrings.dart';
+
+import '../../messages/messagesScreen.dart';
+
+class AvailableLeadScreen extends StatefulWidget {
+  AvailableLeadScreen({super.key});
+
+  @override
+  State<AvailableLeadScreen> createState() => _AvailableLeadScreenState();
+}
+
+class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.backGround,
+      body: Stack(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleBar(
+                title: "Available Lead",
+                isAvatarEnabled: true,
+                isBackEnabled: true,
+              ),
+              SizedBox(height: 2.h),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 5.w,
+                          vertical: 2.5.h,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(15),
+
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppColors.black.withOpacity(0.1),
+                              blurRadius: 25,
+                              spreadRadius: 1,
+                              offset: Offset(0, 10),
+                            ),
+
+                            BoxShadow(
+                              color: AppColors.black.withOpacity(0.02),
+                              blurRadius: 10,
+                              offset: Offset(0, -2),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 18,
+                                  color: AppColors.primaryDarkBlue,
+                                ),
+                                SizedBox(width: 2.w),
+                                Text(
+                                  "MARKETPLACE ACTIVE",
+                                  style: TextStyle(
+                                    fontSize: 14.sp,
+                                    fontFamily: CustomFonts.bold,
+                                    color: AppColors.primaryDarkBlue
+                                        .withOpacity(0.7),
+                                    letterSpacing: 1.2,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 1.h),
+
+                            Text(
+                              "Available Leads",
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 22.sp,
+                                fontFamily: CustomFonts.bold,
+                                color: AppColors.primaryDarkBlue,
+                                letterSpacing: 0.2,
+                                height: 1.1,
+                              ),
+                            ),
+                            SizedBox(height: 2.h),
+
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 4.w,
+                                vertical: 1.h,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryDarkBlue.withOpacity(
+                                  0.05,
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.filter_list,
+                                    size: 20.sp,
+                                    color: AppColors.primaryDarkBlue,
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Text(
+                                    "All Trade Types",
+                                    style: TextStyle(
+                                      fontSize: 16.sp,
+                                      fontFamily: CustomFonts.bold,
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 2.h),
+
+                      Container(
+                        padding: EdgeInsets.all(5.w),
+                        decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppColors.primaryDarkBlue.withOpacity(
+                                0.12,
+                              ),
+                              blurRadius: 30,
+                              spreadRadius: 2,
+                              offset: Offset(0, 15),
+                            ),
+                            BoxShadow(
+                              color: AppColors.black.withOpacity(0.03),
+                              blurRadius: 10,
+                              spreadRadius: -2,
+                              offset: Offset(0, -5),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 3.w,
+                                    vertical: 0.8.h,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primaryDarkBlue
+                                        .withOpacity(0.05),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "[OPEN LEAD]",
+                                    style: TextStyle(
+                                      color: AppColors.primaryDarkBlue,
+                                      fontFamily: CustomFonts.semiBold,
+                                      fontSize: 15.sp,
+                                    ),
+                                  ),
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Text(
+                                      "QUOTE PRICE",
+                                      style: TextStyle(
+                                        fontSize: 14.sp,
+                                        color: AppColors.primaryDarkBlue
+                                            .withOpacity(0.6),
+                                        fontFamily: CustomFonts.medium,
+                                      ),
+                                    ),
+                                    Text(
+                                      "£20.00",
+                                      style: TextStyle(
+                                        fontSize: 20.sp,
+                                        fontFamily: CustomFonts.bold,
+                                        color: AppColors.primaryDarkBlue,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 2.h),
+
+                            Text(
+                              "Kitchen Extension",
+                              style: TextStyle(
+                                fontSize: 20.sp,
+                                fontFamily: CustomFonts.bold,
+                                color: AppColors.primaryDarkBlue,
+                              ),
+                            ),
+                            SizedBox(height: 1.h),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on_outlined,
+                                  color: AppColors.primaryDarkBlue,
+                                  size: 18.sp,
+                                ),
+                                SizedBox(width: 1.w),
+                                Text(
+                                  "Fulham, SW6",
+                                  style: TextStyle(
+                                    fontSize: 16.sp,
+                                    fontFamily: CustomFonts.regular,
+                                    color: AppColors.primaryDarkBlue,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 2.h),
+
+                            Text(
+                              "Full structural extension for a Victorian terrace. Architect drawings approved. Looking for experienced masonry specialists.",
+                              style: TextStyle(
+                                fontSize: 15.sp,
+                                color: AppColors.primaryDarkBlue,
+                                fontFamily: CustomFonts.regular,
+                                height: 1.5,
+                              ),
+                            ),
+
+                            SizedBox(height: 3.h),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 15.w,
+                                  child: Stack(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 18.sp,
+                                        backgroundColor: Colors.grey.shade300,
+                                        child: ClipOval(
+                                          child: Image.network(
+                                            "https://i.pravatar.cc/150?img=3",
+                                            // 🔥 Testing URL
+                                            width: 36,
+                                            height: 36,
+                                            fit: BoxFit.cover,
+                                            loadingBuilder:
+                                                (context, child, progress) {
+                                                  if (progress == null)
+                                                    return child;
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 15,
+                                                      height: 15,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                            strokeWidth: 2,
+                                                            color: AppColors
+                                                                .primaryDarkBlue,
+                                                          ),
+                                                    ),
+                                                  );
+                                                },
+
+                                            // 🔹 Error fallback
+                                            errorBuilder:
+                                                (context, error, stackTrace) {
+                                                  return Icon(
+                                                    Icons.person,
+                                                    color: Colors.grey,
+                                                    size: 20,
+                                                  );
+                                                },
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        left: 20,
+                                        child: CircleAvatar(
+                                          radius: 18.sp,
+                                          backgroundColor:
+                                              AppColors.primaryDarkBlue,
+                                          child: Text(
+                                            "+2",
+                                            style: TextStyle(
+                                              fontSize: 14.sp,
+                                              color: AppColors.white,
+                                              fontFamily: CustomFonts.regular,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 35.w,
+                                  child: CustomButton(
+                                    title: "Buy Lead",
+                                    onTap: () {
+                                      Get.to(()=>TheBlueChipScreen());
+                                    },
+                                    backgroundColor: AppColors.primaryDarkBlue,
+                                    textColor: AppColors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 2.h),
+
+                      Container(
+                        padding: EdgeInsets.all(5.w),
+                        decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppColors.primaryDarkBlue.withOpacity(
+                                0.12,
+                              ),
+                              blurRadius: 30,
+                              spreadRadius: 2,
+                              offset: Offset(0, 15),
+                            ),
+                            BoxShadow(
+                              color: AppColors.black.withOpacity(0.03),
+                              blurRadius: 10,
+                              spreadRadius: -2,
+                              offset: Offset(0, -5),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 3.w,
+                                    vertical: 0.8.h,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.green
+                                        .withOpacity(0.05),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "[SELECTED CUSTOMER]",
+                                    style: TextStyle(
+                                      color: AppColors.green,
+                                      fontFamily: CustomFonts.semiBold,
+                                      fontSize: 15.sp,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 3.w,
+                                    vertical: 0.8.h,
+                                  ),
+                                  child: Icon(Icons.check_circle,color:AppColors.green,)
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 2.h),
+
+                            Text(
+                              "Bespoke Garden Office",
+                              style: TextStyle(
+                                fontSize: 20.sp,
+                                fontFamily: CustomFonts.bold,
+                                color: AppColors.primaryDarkBlue,
+                              ),
+                            ),
+                            SizedBox(height: 1.h),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on_outlined,
+                                  color: AppColors.primaryDarkBlue,
+                                  size: 18.sp,
+                                ),
+                                SizedBox(width: 1.w),
+                                Text(
+                                  "Richmond, TW10",
+                                  style: TextStyle(
+                                    fontSize: 16.sp,
+                                    fontFamily: CustomFonts.regular,
+                                    color: AppColors.primaryDarkBlue,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 2.h),
+
+                            Text(
+                              "Timber-framed insulated garden studio with electrical fit-out. You were selected for this job. Review project details and confirm start date.",
+                              style: TextStyle(
+                                fontSize: 15.sp,
+                                color: AppColors.primaryDarkBlue,
+                                fontFamily: CustomFonts.regular,
+                                height: 1.5,
+                              ),
+                            ),
+
+                            SizedBox(height: 3.h),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+
+                                // LEFT TEXT
+                                Expanded(
+                                  child: Text(
+                                    "Accepted 2h ago",
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 15.sp,
+                                      color: AppColors.grey,
+                                      fontFamily: CustomFonts.semiBold,
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(width: 8),
+
+                                SizedBox(
+                                  width: 35.w,
+                                  child: CustomButton(
+                                    title: "View Details",
+                                    onTap: () {
+                                      Get.to(()=>MessagesScreen());
+                                    },
+                                    backgroundColor: AppColors.grey,
+                                    textColor: AppColors.white,
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 5.h),
+                    ],
+                  ).paddingSymmetric(horizontal: 4.w),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
