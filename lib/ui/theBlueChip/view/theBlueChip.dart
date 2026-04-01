@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
@@ -68,11 +69,10 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleBar(
-                title: "The Blue Chip",
-                isAvatarEnabled: true,
-                isBackEnabled: true,
-              ),
+
+              CustomAppBar(title: "The Blue Chip",showBack: true,showDrawer: true,),
+
+
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(

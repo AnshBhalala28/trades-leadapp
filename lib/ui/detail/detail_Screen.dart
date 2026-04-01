@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 
 import '../../utils/importantStrings.dart';
 
@@ -100,13 +102,18 @@ class _DetailScreenState extends State<DetailScreen> {
     });
   }
 
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF4F6FA),
+      key: scaffoldKey,
+      drawer: drawer1(),
+      backgroundColor: AppColors.backGround,
       body: SingleChildScrollView(
         child: Column(
           children: [
+            CustomAppBar(title: "Detail",showBack: true,showDrawer: true,),
             Stack(
               clipBehavior: Clip.none,
               children: [

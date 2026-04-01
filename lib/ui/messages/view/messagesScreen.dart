@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class MessagesScreen extends StatefulWidget {
@@ -54,22 +56,17 @@ class _MessagesScreenState extends State<MessagesScreen> {
       }
     });
   }
-
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: drawer1(),
       backgroundColor: Colors.white,
       body: Column(
         children: [
 
-
-          TitleBar(
-            title: "Leads Chat",
-            isBackEnabled: true,
-            isAvatarEnabled: true,
-          ),
-
-
+          CustomAppBar(title: "Chats",showBack: true,showDrawer: true,),
           Expanded(
             child: ListView.builder(
               controller: _scrollController,

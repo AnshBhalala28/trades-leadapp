@@ -5,8 +5,10 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 import '../../messages/view/messagesScreen.dart';
@@ -21,20 +23,21 @@ class AvailableLeadScreen extends StatefulWidget {
 class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
   double rating = 0;
 
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: drawer1(),
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleBar(
-                title: "Available Lead",
-                isAvatarEnabled: true,
-                isBackEnabled: true,
-              ),
+              CustomAppBar(title: "Available Lead",showBack: true,showDrawer: true,),
+
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(

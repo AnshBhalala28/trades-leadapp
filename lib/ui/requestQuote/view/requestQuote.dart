@@ -8,7 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/leads/view/availableLeadScreen.dart';
 import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
-import 'package:tradesleadapp/ui/myJobPost/view/myJobPostScreen.dart';
+
 import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
 
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';

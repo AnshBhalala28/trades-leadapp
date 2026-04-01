@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
@@ -17,15 +18,22 @@ class MyJobPostScreen1 extends StatefulWidget {
 }
 
 class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
+
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: CustomDrawer(),
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [
           Column(
             children: [
-              TitleBar(title: "My Job Posts", isBackEnabled: true),
+              CustomAppBar(title: "My Job Posts",showBack: true,showDrawer: true,),
+
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(

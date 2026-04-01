@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/CustomTextField.dart';
+import 'package:tradesleadapp/utils/customInputField.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 import 'LoginScreen.dart';
@@ -21,6 +22,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
   final TextEditingController passwordController = TextEditingController();
   String selectedRole = "user";
   int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -350,7 +352,6 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
           ],
         ).paddingSymmetric(horizontal: 5.w),
       ),
-     
     );
   }
 
