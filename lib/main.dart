@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tradesleadapp/ui/requestQuote/view/requestQuote.dart';
+import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
+import 'ui/detail/detail_Screen.dart';
 
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             primarySwatch: Colors.blue,
           ),
-          home: RequestQuoteScreen(),
+          home: MyJobPostScreen1(),
 
         );
       },
