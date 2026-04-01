@@ -6,6 +6,7 @@ import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
+import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class TheBlueChipScreen extends StatefulWidget {
@@ -122,20 +123,74 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                             SizedBox(height: 1.h),
                             Row(
                               children: [
-                                buildStatusChip(
-                                  count: "12",
-                                  label: "ACTIVE",
-                                  bgColor: AppColors.primaryDarkBlue,
-                                  textColor: AppColors.white,
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 4.w,
+                                    vertical: 1.h,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primaryDarkBlue,
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        "14",
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontFamily: CustomFonts.semiBold,
+                                          color: AppColors.white,
+                                        ),
+                                      ),
+                                      SizedBox(width: 2.w),
+                                      Text(
+                                        "ACTIVE",
+                                        style: TextStyle(
+                                          fontSize: 14.5.sp,
+                                          fontFamily: CustomFonts.semiBold,
+                                          color: AppColors.white,
+                                          letterSpacing: 0.5,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
 
                                 SizedBox(width: 3.w),
 
-                                buildStatusChip(
-                                  count: "4",
-                                  label: "ARCHIVED",
-                                  bgColor: AppColors.primaryDarkBlue,
-                                  textColor: AppColors.white,
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 4.w,
+                                    vertical: 1.h,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primaryDarkBlue,
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        "4",
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontFamily: CustomFonts.semiBold,
+                                          color: AppColors.white,
+                                        ),
+                                      ),
+                                      SizedBox(width: 2.w),
+                                      Text(
+                                        "ARCHIVED",
+                                        style: TextStyle(
+                                          fontSize: 14.5.sp,
+                                          fontFamily: CustomFonts.semiBold,
+                                          color: AppColors.white,
+                                          letterSpacing: 0.5,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -245,11 +300,11 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                               Row(
                                 children: [
                                   Expanded(
-                                    child: buildBtn(
-                                      label: "Message",
-                                      icon: Icons.chat_bubble_outline,
-                                      color: Color(0xFF0D2451),
-                                      isPrimary: true,
+                                    child: CustomButton(
+                                      title: "Message",
+                                      backgroundColor:
+                                          AppColors.primaryDarkBlue,
+                                      textColor: AppColors.white,
                                       onTap: () {
                                         Get.to(() => MessagesScreen());
                                       },
@@ -257,11 +312,14 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                   ),
                                   SizedBox(width: 3.w),
                                   Expanded(
-                                    child: buildBtn(
-                                      label: "Call",
-                                      icon: Icons.phone_outlined,
-                                      color: Color(0xFFE8EEF9),
-                                      isPrimary: false,
+                                    child: CustomButton(
+                                      title: "Call",
+                                      backgroundColor:
+                                      AppColors.primaryDarkBlue.withOpacity(0.05),
+                                      textColor: AppColors.primaryDarkBlue,
+                                      onTap: () {
+                                        Get.to(() => MessagesScreen());
+                                      },
                                     ),
                                   ),
                                 ],
@@ -282,83 +340,6 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
     );
   }
 
-  Widget buildStatusChip({
-    required String count,
-    required String label,
-    required Color bgColor,
-    required Color textColor,
-  }) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.h),
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            count,
-            style: TextStyle(
-              fontSize: 14.sp,
-              fontFamily: CustomFonts.semiBold,
-              color: textColor,
-            ),
-          ),
-          SizedBox(width: 2.w),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 14.5.sp,
-              fontFamily: CustomFonts.semiBold,
-              color: textColor,
-              letterSpacing: 0.5,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget buildBtn({
-    required String label,
-    required IconData icon,
-    required Color color,
-    required bool isPrimary,
-    VoidCallback? onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 1.4.h),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-              color: isPrimary ? AppColors.white : AppColors.primaryDarkBlue,
-              size: 18.sp,
-            ),
-            SizedBox(width: 2.w),
-            Text(
-              label,
-              style: TextStyle(
-                color: isPrimary ? AppColors.white : AppColors.primaryDarkBlue,
-                fontFamily: isPrimary
-                    ? CustomFonts.semiBold
-                    : CustomFonts.regular,
-                fontSize: 15.sp,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
 
 class LeadModel {

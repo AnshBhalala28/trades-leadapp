@@ -7,6 +7,11 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/leads/view/availableLeadScreen.dart';
+import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
+import 'package:tradesleadapp/ui/myJobPost/view/myJobPostScreen.dart';
+import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
+
+import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
 import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
@@ -115,7 +120,44 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      buildProgressBar(),
+                  Column(
+                  children: [
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "PROJECT DETAILS",
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          fontFamily: CustomFonts.regular,
+                          color: AppColors.primaryDarkBlue,
+                          letterSpacing: 1.1,
+                        ),
+                      ),
+                      Text(
+                        "Step 1 of 3",
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          fontFamily: CustomFonts.bold,
+                          color: AppColors.primaryDarkBlue,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 1.5.h),
+
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: LinearProgressIndicator(
+                      value: 0.33,
+                      minHeight: 8,
+                      backgroundColor: Colors.grey.shade200,
+                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF0D2451)),
+                    ),
+                  ),
+                  ],
+                ),
                       SizedBox(height: 2.h),
                       /// LOCATION
                       CustomInputField(
@@ -455,7 +497,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                         backgroundColor: AppColors.primaryDarkBlue,
                         textColor: AppColors.white,
                         onTap: () {
-                          Get.to(() => AvailableLeadScreen());
+                          Get.to(() => MyJobPostScreen1());
                         },
                       ),
                       SizedBox(height: 1.h),
@@ -481,47 +523,6 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildProgressBar() {
-    return Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "PROJECT DETAILS",
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueGrey.shade700,
-                  letterSpacing: 1.1,
-                ),
-              ),
-              Text(
-                "Step 1 of 3",
-                style: TextStyle(
-                  fontSize: 15.sp,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF0D2451),
-                ),
-              ),
-            ],
-          ),
-
-          SizedBox(height: 1.5.h),
-
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: LinearProgressIndicator(
-              value: 0.33,
-              minHeight: 8,
-              backgroundColor: Colors.grey.shade200,
-              valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF0D2451)),
-            ),
-          ),
-        ],
     );
   }
 }
