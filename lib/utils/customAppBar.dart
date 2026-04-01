@@ -81,73 +81,72 @@ Widget TitleBar({
       child: Container(
         // Wrapped in SafeArea so it doesn't overlap the top status bar (notch area)
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
-      decoration: BoxDecoration(
-        color: clr ?? AppColors.white,
-        // Figma styling uses a very subtle 1px border at the bottom instead of a heavy box shadow
-        border: Border(
-          bottom: BorderSide(
-            color: AppColors.inactiveIconGray.withOpacity(0.2),
-            width: 1.0,
+        decoration: BoxDecoration(
+          color: clr ?? AppColors.white,
+          // Figma styling uses a very subtle 1px border at the bottom instead of a heavy box shadow
+          border: Border(
+            bottom: BorderSide(
+              color: AppColors.inactiveIconGray.withOpacity(0.2),
+              width: 1.0,
+            ),
+          ),
+        ),
+        child: SizedBox(
+          height: 6.h,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              if (isBackEnabled)
+                _buildButton(Icons.arrow_back_rounded, () => Get.back())
+              else if (isDrawerEnabled)
+                _buildButton(Icons.menu_rounded, drawerCallback)
+              else if (isMainLogoEnabled)
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 8.0),
+                  height: 28.sp,
+                  width: 28.sp,
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryDarkBlue,
+                    shape: BoxShape.circle,
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "T",
+                    style: TextStyle(
+                      color: AppColors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: CustomFonts.bold,
+                    ),
+                  ),
+                )
+              else
+                SizedBox(width: 2.w),
+
+              SizedBox(width: 2.w),
+
+              Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    title ?? "",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: CustomFonts.bold,
+                      color: AppColors.primaryDarkBlue,
+                      letterSpacing: -0.5,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+
+              Row(children: rightButtons),
+            ],
           ),
         ),
       ),
-      child: SizedBox(
-        height: 6.h,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-
-            if (isBackEnabled)
-              _buildButton(Icons.arrow_back_rounded, () => Get.back())
-            else if (isDrawerEnabled)
-              _buildButton(Icons.menu_rounded, drawerCallback)
-            else if (isMainLogoEnabled)
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 8.0),
-                height: 28.sp,
-                width: 28.sp,
-                decoration: BoxDecoration(
-                  color: AppColors.primaryDarkBlue,
-                  shape: BoxShape.circle,
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  "T",
-                  style: TextStyle(
-                    color: AppColors.white,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.bold,
-                  ),
-                ),
-              )
-            else
-              SizedBox(width: 2.w),
-
-            SizedBox(width: 2.w),
-
-            Expanded(
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  title ?? "",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: CustomFonts.bold,
-                    color: AppColors.primaryDarkBlue,
-                    letterSpacing: -0.5,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-
-
-            Row(children: rightButtons),
-          ],
-        ),
-      ),
-        ),
-    ));
+    ),
+  );
 }

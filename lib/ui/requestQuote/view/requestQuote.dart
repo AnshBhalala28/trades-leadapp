@@ -13,8 +13,10 @@ import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
 
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
 import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
+import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/customInputField.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
@@ -104,16 +106,14 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawer1(),
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [
           Column(
             children: [
-              TitleBar(
-                title: "Request Quotes",
-                isBackEnabled: true,
-                isInfoEnabled: true,
-              ),
+              CustomAppBar(title: "Request Quotes",showBack: true,showDrawer: true,),
+
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(
