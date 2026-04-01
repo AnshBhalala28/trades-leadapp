@@ -1,7 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/ui/profile/view/profileScreen.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class drawer1 extends StatefulWidget {
@@ -475,7 +478,7 @@ class _drawer1State extends State<drawer1> {
                 SizedBox(height: 2.h),
                 InkWell(
                   onTap: () {
-                    // Get.to(ProfileScreen());
+                    Get.to(ProfileScreen());
                   },
                   child: Container(
                     child: Row(

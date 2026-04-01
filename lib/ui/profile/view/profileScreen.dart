@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 
+import '../../../utils/CustomAppBar1.dart';
 import '../../../utils/importantStrings.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -22,10 +24,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             fontWeight: FontWeight.bold,
             fontFamily: CustomFonts.bold,
             letterSpacing: 1,
-            fontSize: 15.sp,
+            fontSize: 17.sp,
           ),
         ),
-        SizedBox(height: 1.h),
+        SizedBox(height: 0.5.h),
         Text(
           title,
           style: TextStyle(
@@ -33,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             fontWeight: FontWeight.bold,
             fontFamily: CustomFonts.bold,
             letterSpacing: 1,
-            fontSize: 15.sp,
+            fontSize: 16.sp,
           ),
         ),
       ],
@@ -42,7 +44,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget buildTile(IconData icon, String title) {
     return ListTile(
-      leading: Icon(icon, color: AppColors.primaryDarkBlue),
+      leading: Container(
+        height: 10.w,
+          width: 10.w,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color:  AppColors.primaryDarkBlue,
+          ),
+          child: Icon(icon, color: AppColors.white)),
       title: Text(
         title,
         style: TextStyle(
@@ -50,13 +60,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
           fontWeight: FontWeight.bold,
           fontFamily: CustomFonts.bold,
           letterSpacing: 1,
-          fontSize: 15.sp,
+          fontSize: 17.sp,
         ),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios,
         color: AppColors.primaryDarkBlue,
-        size: 16.sp,
+        size: 18.sp,
       ),
     );
   }
@@ -64,11 +74,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF5F6FA),
+      drawer: drawer1(),
+      backgroundColor: AppColors.backGround,
       body: Column(
         children: [
-          SizedBox(height: 5.h),
-          TitleBar(title: "title", isBackEnabled: true),
+          CustomAppBar(title: "Profile",showBack: true,showDrawer: true,),
 
           SizedBox(height: 2.h),
 
@@ -86,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               fontWeight: FontWeight.bold,
               fontFamily: CustomFonts.bold,
               letterSpacing: 1,
-              fontSize: 15.sp,
+              fontSize: 18.sp,
             ),
           ),
 
@@ -130,27 +140,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      icon: const Icon(Icons.logout),
-                      label: const Text("Log out"),
+                      icon: const Icon(Icons.logout,color: Colors.red,),
+                      label:  Text("Log out",style: TextStyle(
+                        color: AppColors.red,
+
+                        fontFamily: CustomFonts.regular,
+                        letterSpacing: 1,
+                        fontSize: 17.sp,
+                      ),),
                     ),
                   ),
                 ),
               ],
             ),
           ),
+          SizedBox(height: 10.h,)
         ],
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
-        ],
-      ),
     );
   }
 }
