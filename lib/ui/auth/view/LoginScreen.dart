@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/home/homeScreen_One.dart';
 import 'package:tradesleadapp/utils/CustomTextField.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
@@ -142,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
             width: double.infinity,
             child: GestureDetector(
               onTap: () {
-                // action here
+                Get.to(homeScreen_one());
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 1.5.h),

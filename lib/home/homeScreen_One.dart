@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/home/homeScreen_two.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class homeScreen_one extends StatefulWidget {
@@ -21,20 +24,28 @@ class _homeScreen_oneState extends State<homeScreen_one> {
           children: [
             /// ================= HEADER =================
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Row(
                 children: [
-                   Icon(Icons.menu),
-                   SizedBox(width: 10),
-                   Text(
+                  Icon(Icons.menu),
+                  SizedBox(width: 10),
+                  Text(
                     "THE BLUE-CHIP",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17.sp,fontFamily: CustomFonts.regular),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.sp,
+                      fontFamily: CustomFonts.regular,
+                    ),
                   ),
-                   Spacer(),
-                  Icon(Icons.notifications_none),
-                   SizedBox(width: 10),
+                  Spacer(),
+                  GestureDetector(
+                    onTap: (){
+                      Get.to(homeScreen_two());
+                    },
+                      child: Icon(Icons.notifications_none)),
+                  SizedBox(width: 10),
                   Container(
-                    padding:  EdgeInsets.all(2),
+                    padding: EdgeInsets.all(2),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.white, width: 2),
@@ -46,11 +57,11 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                         width: 36,
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
-                          return  Icon(Icons.person);
+                          return Icon(Icons.person);
                         },
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -65,18 +76,22 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                       children: [
                         /// HERO
                         Container(
-                          margin:  EdgeInsets.fromLTRB(16, 16, 16, 60),
-                          padding:  EdgeInsets.all(20),
+                          margin: EdgeInsets.fromLTRB(16, 16, 16, 60),
+                          padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
-                            color:  Color(0xff0D2B52),
+                            color: Color(0xff0D2B52),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children:  [
+                            children: [
                               Text(
                                 "PREMIUM MARKETPLACE",
-                                style: TextStyle(color: Colors.white70, fontSize: 15.sp,fontFamily: CustomFonts.medium),
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 15.sp,
+                                  fontFamily: CustomFonts.medium,
+                                ),
                               ),
                               SizedBox(height: 10),
                               Text(
@@ -85,13 +100,17 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                   color: Colors.white,
                                   fontSize: 21.sp,
                                   fontWeight: FontWeight.bold,
-                                    fontFamily: CustomFonts.bold
+                                  fontFamily: CustomFonts.bold,
                                 ),
                               ),
                               SizedBox(height: 5),
                               Text(
                                 "Connecting you with the UK's most elite certified tradespeople.",
-                                style: TextStyle(color: Colors.white70,fontFamily: CustomFonts.medium,fontSize: 15.sp),
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontFamily: CustomFonts.medium,
+                                  fontSize: 15.sp,
+                                ),
                               ),
                               SizedBox(height: 30), // space for overlap
                             ],
@@ -104,7 +123,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                           left: 16,
                           right: 16,
                           child: Container(
-                            padding:  EdgeInsets.all(16),
+                            padding: EdgeInsets.all(16),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
@@ -112,23 +131,30 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                 BoxShadow(
                                   color: Colors.black.withOpacity(0.08),
                                   blurRadius: 10,
-                                )
+                                ),
                               ],
                             ),
                             child: Column(
                               children: [
                                 Container(
-                                  padding:  EdgeInsets.symmetric(horizontal: 12),
+                                  padding: EdgeInsets.symmetric(horizontal: 12),
                                   height: 50,
                                   decoration: BoxDecoration(
-                                    color:  Color(0xffF1F3F7),
+                                    color: Color(0xffF1F3F7),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
-                                  child:  Row(
+                                  child: Row(
                                     children: [
                                       Icon(Icons.build),
                                       SizedBox(width: 10),
-                                      Text("What service do you need?",style: TextStyle(fontSize: 15.sp,fontFamily:  CustomFonts.regular,fontWeight: FontWeight.normal),),
+                                      Text(
+                                        "What service do you need?",
+                                        style: TextStyle(
+                                          fontSize: 15.sp,
+                                          fontFamily: CustomFonts.regular,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -136,30 +162,44 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        padding:  EdgeInsets.symmetric(horizontal: 12),
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 12,
+                                        ),
                                         height: 50,
                                         decoration: BoxDecoration(
-                                          color:  Color(0xffF1F3F7),
-                                          borderRadius: BorderRadius.circular(12),
+                                          color: Color(0xffF1F3F7),
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
                                         ),
-                                        child:  Row(
+                                        child: Row(
                                           children: [
                                             Icon(Icons.location_on_outlined),
                                             SizedBox(width: 10),
-                                            Text("Postcode",style: TextStyle(fontSize: 15.sp,fontFamily:  CustomFonts.regular,fontWeight: FontWeight.normal)),
+                                            Text(
+                                              "Postcode",
+                                              style: TextStyle(
+                                                fontSize: 15.sp,
+                                                fontFamily: CustomFonts.regular,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                     SizedBox(width: 10),
+                                    SizedBox(width: 10),
                                     Container(
                                       height: 50,
                                       width: 50,
                                       decoration: BoxDecoration(
-                                        color:  Color(0xff0D2B52),
+                                        color: Color(0xff0D2B52),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
-                                      child:  Icon(Icons.search, color: Colors.white),
+                                      child: Icon(
+                                        Icons.search,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -171,30 +211,36 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                     ),
 
                     /// IMPORTANT SPACE (overlap fix)
-                     SizedBox(height: 7.h),
+                    SizedBox(height: 7.h),
+
                     /// ================= BROWSE =================
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Row(
-                        children:  [
+                        children: [
                           Text(
                             "Browse Expertise",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 17.sp,
-                              fontFamily: CustomFonts.regular
+                              fontFamily: CustomFonts.regular,
                             ),
                           ),
                           Spacer(),
                           Text(
                             "VIEW ALL",
-                            style: TextStyle(color: Colors.grey, fontSize: 15.sp,fontWeight: FontWeight.bold,fontFamily: CustomFonts.regular),
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: CustomFonts.regular,
+                            ),
                           ),
                         ],
                       ),
                     ),
 
-                     SizedBox(height: 15),
+                    SizedBox(height: 15),
 
                     /// ================= TOP CARDS (HORIZONTAL) =================
                     SizedBox(
@@ -232,10 +278,10 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                               margin: EdgeInsets.only(
                                 left: index == 0 ? 16 : 10,
                               ),
-                              padding:  EdgeInsets.all(12),
+                              padding: EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 color: isSelected
-                                    ?  Color(0xff0D2B52)
+                                    ? Color(0xff0D2B52)
                                     : Colors.white,
                                 borderRadius: BorderRadius.circular(16),
                               ),
@@ -248,7 +294,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                         ? Colors.white
                                         : Colors.black,
                                   ),
-                                   Spacer(),
+                                  Spacer(),
                                   Text(
                                     titles[index],
                                     style: TextStyle(
@@ -256,7 +302,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                           ? Colors.white
                                           : Colors.black,
                                       fontFamily: CustomFonts.regular,
-                                      fontSize: 15.sp
+                                      fontSize: 15.sp,
                                     ),
                                   ),
                                 ],
@@ -267,7 +313,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                       ),
                     ),
 
-                     SizedBox(height: 15),
+                    SizedBox(height: 15),
 
                     /// ================= SMALL CATEGORY (HORIZONTAL) =================
                     SizedBox(
@@ -313,12 +359,14 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                   ),
                                   child: Icon(icons[index], size: 20),
                                 ),
-                                 SizedBox(width: 10),
+                                SizedBox(width: 10),
                                 Expanded(
                                   child: Text(
                                     titles[index],
-                                    style:  TextStyle(  fontFamily: CustomFonts.regular,
-                                        fontSize: 14.5.sp),
+                                    style: TextStyle(
+                                      fontFamily: CustomFonts.regular,
+                                      fontSize: 14.5.sp,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -328,14 +376,13 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                       ),
                     ),
 
-                     SizedBox(height: 15),
-
+                    SizedBox(height: 15),
 
                     Container(
-                      margin:  EdgeInsets.symmetric(horizontal: 16),
-                      padding:  EdgeInsets.all(16),
+                      margin: EdgeInsets.symmetric(horizontal: 16),
+                      padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color:  Color(0xffF1F3F7),
+                        color: Color(0xffF1F3F7),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.grey.shade300),
                       ),
@@ -348,16 +395,20 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child:  Icon(Icons.architecture),
+                            child: Icon(Icons.architecture),
                           ),
-                           SizedBox(width: 15),
-                           Expanded(
+                          SizedBox(width: 15),
+                          Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   "Building & Construction",
-                                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15.sp,fontFamily: CustomFonts.regular,),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15.sp,
+                                    fontFamily: CustomFonts.regular,
+                                  ),
                                 ),
                                 SizedBox(height: 5),
                                 Text(
@@ -365,41 +416,46 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                   style: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 14.sp,
-                                      fontFamily: CustomFonts.regular,
+                                    fontFamily: CustomFonts.regular,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                           Icon(Icons.arrow_forward_ios, size: 17.sp),
+                          Icon(Icons.arrow_forward_ios, size: 17.sp),
                         ],
                       ),
                     ),
 
-                     SizedBox(height: 20),
+                    SizedBox(height: 20),
 
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 16),
+                      padding: EdgeInsets.symmetric(horizontal: 16),
                       child: Row(
-                        children:  [
+                        children: [
                           Text(
                             "Verified Masters",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17.sp,
-                                fontFamily: CustomFonts.regular
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17.sp,
+                              fontFamily: CustomFonts.regular,
                             ),
                           ),
                           Spacer(),
                           Text(
                             "VIEW ALL",
-                            style: TextStyle(color: Colors.grey, fontSize: 15.sp,fontWeight: FontWeight.bold,fontFamily: CustomFonts.regular),
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: CustomFonts.regular,
+                            ),
                           ),
                         ],
                       ),
                     ),
 
-                     SizedBox(height: 1.5.h),
+                    SizedBox(height: 1.5.h),
 
                     SizedBox(
                       height: 250,
@@ -416,7 +472,10 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                           ];
 
                           return Container(
-                            margin: EdgeInsets.only(left: index == 0 ? 16 : 8, right: 8),
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 16 : 8,
+                              right: 8,
+                            ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
@@ -432,7 +491,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                 Stack(
                                   children: [
                                     ClipRRect(
-                                      borderRadius:  BorderRadius.vertical(
+                                      borderRadius: BorderRadius.vertical(
                                         top: Radius.circular(20),
                                       ),
                                       child: Image.network(
@@ -453,7 +512,9 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                         ),
                                         decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(20),
+                                          borderRadius: BorderRadius.circular(
+                                            20,
+                                          ),
                                         ),
                                         child: Row(
                                           children: [
@@ -480,7 +541,8 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                 Padding(
                                   padding: EdgeInsets.all(12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         "Johnathan Vance $index",
@@ -537,9 +599,9 @@ class _homeScreen_oneState extends State<homeScreen_one> {
       ),
 
       floatingActionButton: FloatingActionButton(
-        backgroundColor:  Color(0xff0D2B52),
+        backgroundColor: Color(0xff0D2B52),
         onPressed: () {},
-        child:  Icon(Icons.add,color: Colors.white,),
+        child: Icon(Icons.add, color: Colors.white),
       ),
     );
   }

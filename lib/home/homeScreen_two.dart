@@ -457,6 +457,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../utils/customDrawer.dart';
 import '../utils/importantStrings.dart';
 
 class homeScreen_two extends StatefulWidget {
@@ -466,6 +467,7 @@ class homeScreen_two extends StatefulWidget {
   State<homeScreen_two> createState() => _homeScreen_twoState();
 }
 int _currentPage = 0;
+final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 class _homeScreen_twoState extends State<homeScreen_two> {
   int selectedChip = 0;
   late PageController _pageController;
@@ -509,6 +511,8 @@ class _homeScreen_twoState extends State<homeScreen_two> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: drawer1(),
       // backgroundColor: const Color(0xffF5F7FB),
       backgroundColor: const Color(0xffF5F7FB),
       body: SafeArea(
@@ -520,13 +524,18 @@ class _homeScreen_twoState extends State<homeScreen_two> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center, // 🔥 FIX
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
+                  GestureDetector(
+                    onTap: () {
+                      scaffoldKey.currentState!.openDrawer();
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(Icons.menu),
                     ),
-                    child: Icon(Icons.menu),
                   ),
                   SizedBox(width: 12),
                   Expanded(

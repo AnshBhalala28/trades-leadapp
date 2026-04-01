@@ -5,6 +5,8 @@ import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/CustomTextField.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
+import 'LoginScreen.dart';
+
 class SingnUpScreen extends StatefulWidget {
   SingnUpScreen({super.key});
 
@@ -28,7 +30,6 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
           children: [
             SizedBox(height: 15.h),
 
-            /// Header
             Row(
               children: [
                 Text(
@@ -45,7 +46,6 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
 
             SizedBox(height: 3.h),
 
-            /// Title
             Text(
               "Crate Your Account",
               style: TextStyle(
@@ -177,7 +177,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
 
             SizedBox(height: 1.h),
 
-            /// Email Field
+
             CustomTextField(
               hintText: "Email",
               controller: emailController,
@@ -288,7 +288,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
               width: double.infinity,
               child: GestureDetector(
                 onTap: () {
-                  // action here
+               Get.to(LoginScreen());
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 1.5.h),
