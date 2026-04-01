@@ -18,11 +18,11 @@ class SingnUpScreen extends StatefulWidget {
 class _SingnUpScreenState extends State<SingnUpScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController fullname = TextEditingController();
+  final TextEditingController phone = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
   String selectedRole = "user";
   int currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +30,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 15.h),
+            SizedBox(height: 5.h),
 
             Row(
               children: [
@@ -46,7 +46,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
               ],
             ),
 
-            SizedBox(height: 3.h),
+            SizedBox(height: 1.h),
 
             Text(
               "Crate Your Account",
@@ -55,11 +55,11 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
                 fontFamily: CustomFonts.bold,
                 letterSpacing: 1,
                 color: AppColors.primaryDarkBlue,
-                fontSize: 20.sp,
+                fontSize: 19.sp,
               ),
             ),
 
-            SizedBox(height: 4.h),
+            SizedBox(height: 1.h),
             Row(
               children: [
                 Expanded(
@@ -95,7 +95,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
                   ),
                 ),
 
-                const SizedBox(width: 10),
+                 SizedBox(width: 10),
 
                 Expanded(
                   child: GestureDetector(
@@ -105,11 +105,11 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
                       });
                     },
                     child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      padding:  EdgeInsets.symmetric(vertical: 14),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: selectedRole == "trader"
-                            ? const Color(0xff0A2540)
+                            ?  Color(0xff0A2540)
                             : Colors.white,
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(color: Colors.grey.shade300),
@@ -132,127 +132,27 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
               ],
             ),
             SizedBox(height: 2.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Full Name",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.regular,
-                    letterSpacing: 1,
-                    color: AppColors.primaryDarkBlue,
-                    fontSize: 15.sp,
-                  ),
-                ),
-              ],
-            ),
 
-            SizedBox(height: 1.h),
 
-            /// Email Field
-            CustomTextField(
-              hintText: "Full Name",
-              controller: fullname,
-              keyboardType: TextInputType.emailAddress,
-              prefixIcon: const Icon(Icons.person),
-            ),
+            CustomInputField(label: 'Full Name', hint: "Enter Full Name", controller: fullname, icon: Icons.person, inputType: TextInputType.text),
 
-            SizedBox(height: 1.h),
+            SizedBox(height: 1.5.h),
 
-            /// Email Label
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Email",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.regular,
-                    letterSpacing: 1,
-                    color: AppColors.primaryDarkBlue,
-                    fontSize: 15.sp,
-                  ),
-                ),
-              ],
-            ),
+            CustomInputField(label: 'Email', hint: "Enter Email", controller: emailController, icon: Icons.email, inputType: TextInputType.text),
+
+            SizedBox(height: 1.5.h),
+
+            CustomInputField(label: 'Phone Number', hint: "Enter Phone Number", controller: phone, icon: Icons.phone, inputType: TextInputType.phone),
+
+            SizedBox(height: 1.5.h),
+
+            CustomInputField(label: 'Password', hint: "Enter Password", controller: passwordController, icon: Icons.lock, inputType: TextInputType.text,isPassword: true,),
+
 
             SizedBox(height: 1.h),
 
 
-            CustomTextField(
-              hintText: "Email",
-              controller: emailController,
-              keyboardType: TextInputType.emailAddress,
-              prefixIcon: const Icon(Icons.email_outlined),
-            ),
 
-            SizedBox(height: 1.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Phone Number",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.regular,
-                    letterSpacing: 1,
-                    color: AppColors.primaryDarkBlue,
-                    fontSize: 15.sp,
-                  ),
-                ),
-              ],
-            ),
-
-            SizedBox(height: 1.h),
-
-            /// Email Field
-            CustomTextField(
-              hintText: "Phone Number",
-              controller: fullname,
-              keyboardType: TextInputType.number,
-              prefixIcon: const Icon(Icons.phone),
-            ),
-
-            SizedBox(height: 1.h),
-
-            /// Password Label
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Password",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.regular,
-                    letterSpacing: 1,
-                    color: AppColors.primaryDarkBlue,
-                    fontSize: 15.sp,
-                  ),
-                ),
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: CustomFonts.regular,
-                    letterSpacing: 1,
-                    color: AppColors.primaryDarkBlue,
-                    fontSize: 15.sp,
-                  ),
-                ),
-              ],
-            ),
-
-            SizedBox(height: 1.h),
-
-            /// Password Field
-            CustomTextField(
-              hintText: "••••••••",
-              controller: passwordController,
-              isPassword: true,
-              prefixIcon: const Icon(Icons.lock_outline),
-              suffixIcon: const Icon(Icons.visibility_off),
-            ),
             SizedBox(height: 2.h),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -285,7 +185,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
             ),
             SizedBox(height: 4.h),
 
-            /// Sign In Button
+
             SizedBox(
               width: double.infinity,
               child: GestureDetector(
@@ -322,7 +222,6 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
 
             SizedBox(height: 2.h),
 
-            /// Footer
             Center(
               child: RichText(
                 text: TextSpan(
@@ -352,6 +251,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
           ],
         ).paddingSymmetric(horizontal: 5.w),
       ),
+     
     );
   }
 

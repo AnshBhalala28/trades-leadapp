@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             primarySwatch: Colors.blue,
           ),
-          home: DetailScreen(),
+          home: SingnUpScreen(),
 
         );
       },
