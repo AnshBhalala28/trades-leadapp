@@ -24,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             fontWeight: FontWeight.bold,
             fontFamily: CustomFonts.bold,
             letterSpacing: 1,
-            fontSize: 17.sp,
+            fontSize: 15.sp,
           ),
         ),
         SizedBox(height: 0.5.h),
@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             fontWeight: FontWeight.bold,
             fontFamily: CustomFonts.bold,
             letterSpacing: 1,
-            fontSize: 16.sp,
+            fontSize: 15.sp,
           ),
         ),
       ],
@@ -45,8 +45,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget buildTile(IconData icon, String title) {
     return ListTile(
       leading: Container(
-        height: 10.w,
-          width: 10.w,
+        height: 8.w,
+          width: 8.w,
           alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -60,13 +60,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
           fontWeight: FontWeight.bold,
           fontFamily: CustomFonts.bold,
           letterSpacing: 1,
-          fontSize: 17.sp,
+          fontSize: 16.sp,
         ),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios,
         color: AppColors.primaryDarkBlue,
-        size: 18.sp,
+        size: 16.sp,
       ),
     );
   }
@@ -96,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               fontWeight: FontWeight.bold,
               fontFamily: CustomFonts.bold,
               letterSpacing: 1,
-              fontSize: 18.sp,
+              fontSize: 16.sp,
             ),
           ),
 

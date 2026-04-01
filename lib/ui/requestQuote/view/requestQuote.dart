@@ -114,7 +114,6 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
           Column(
             children: [
               CustomAppBar(title: "Request Quotes",showBack: true,showDrawer: true,),
-
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(
@@ -129,7 +128,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                       Text(
                         "PROJECT DETAILS",
                         style: TextStyle(
-                          fontSize: 15.sp,
+                          fontSize: 16.sp,
                           fontFamily: CustomFonts.regular,
                           color: AppColors.primaryDarkBlue,
                           letterSpacing: 1.1,
@@ -175,12 +174,12 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                         "TRADE CATEGORY",
                         style: TextStyle(
                           fontFamily: CustomFonts.bold,
-                          fontSize: 17.sp,
+                          fontSize: 16.sp,
                           color: AppColors.primaryDarkBlue,
                         ),
                       ),
 
-                        SizedBox(height: 2.h,),
+                        SizedBox(height: 1.h,),
 
                         GridView.builder(
                           padding: EdgeInsets.zero,
@@ -231,7 +230,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                                 children: [
                                   Icon(
                                     item.icon,
-                                    size: 22.sp,
+                                    size: 19.sp,
                                     color: isSelected
                                         ? Colors.white
                                         : AppColors.primaryDarkBlue,
@@ -278,7 +277,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                         "REFERENCE PHOTOS",
                         style: TextStyle(
                           fontFamily: CustomFonts.bold,
-                          fontSize: 17.sp,
+                          fontSize: 16.sp,
                           color: AppColors.primaryDarkBlue,
                         ),
                       ),
@@ -378,7 +377,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                         "PREFERRED TIMING",
                         style: TextStyle(
                           fontFamily: CustomFonts.bold,
-                          fontSize: 17.sp,
+                          fontSize: 16.sp,
                           color: AppColors.primaryDarkBlue,
                         ),
                       ),
@@ -405,7 +404,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                                 Icon(
                                   Icons.calendar_month_outlined,
                                   color: AppColors.primaryDarkBlue,
-                                  size: 24.sp,
+                                  size: 20.sp,
                                 ),
                                 SizedBox(width: 4.w),
 
@@ -417,7 +416,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                                             'dd/MM/yyyy',
                                           ).format(selectedDate!),
                                     style: TextStyle(
-                                      fontSize: 16.sp,
+                                      fontSize: 15.sp,
                                       fontFamily: CustomFonts.regular,
                                       color: AppColors.primaryDarkBlue,
                                     ),
@@ -427,7 +426,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                                 Icon(
                                   Icons.arrow_forward_ios,
                                   color: AppColors.primaryDarkBlue,
-                                  size: 20.sp,
+                                  size: 18.sp,
                                 ),
                               ],
                             ),

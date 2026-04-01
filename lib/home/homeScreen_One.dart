@@ -30,7 +30,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                   Icon(Icons.menu),
                   SizedBox(width: 10),
                   Text(
-                    "THE BLUE-CHIP",
+                    "Find Trade",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
@@ -157,6 +157,9 @@ class _homeScreen_oneState extends State<homeScreen_one> {
                                       ),
                                     ],
                                   ),
+                                ),
+                                SizedBox(
+                                  height: 1.h,
                                 ),
                                 Row(
                                   children: [

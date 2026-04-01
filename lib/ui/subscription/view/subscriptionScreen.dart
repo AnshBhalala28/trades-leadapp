@@ -90,7 +90,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontSize: 17.sp,
+                              fontSize: 15.sp,
                               fontFamily: CustomFonts.bold,
                               color: AppColors.primaryDarkBlue,
                               letterSpacing: 0.2,
@@ -142,13 +142,13 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               Row(
                                 children: [
                                   CircleAvatar(
-                                    radius: 18,
+                                    radius: 16,
                                     backgroundColor: AppColors.primaryDarkBlue,
                                     child: Text(
                                       "T",
                                       style: TextStyle(
                                         color: AppColors.white,
-                                        fontSize: 20.sp,
+                                        fontSize: 18.sp,
                                         fontFamily: CustomFonts.bold,
                                       ),
                                     ),
@@ -182,14 +182,14 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                             ],
                           ),
 
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 1.h),
 
                           Text(
                             "Unlimited leads for one flat monthly rate.",
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontSize: 17.sp,
+                              fontSize: 16.sp,
                               fontFamily: CustomFonts.bold,
                               color: AppColors.primaryDarkBlue,
                               letterSpacing: 0.2,
@@ -211,7 +211,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               Text(
                                 "£40",
                                 style: TextStyle(
-                                  fontSize: 22.5.sp,
+                                  fontSize: 19.sp,
                                   fontFamily: CustomFonts.bold,
                                   color: AppColors.primaryDarkBlue,
                                 ),
@@ -222,7 +222,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 child: Text(
                                   "/month",
                                   style: TextStyle(
-                                    fontSize: 17.sp,
+                                    fontSize: 18.sp,
                                     color: AppColors.primaryDarkBlue.withOpacity(0.6),
                                   ),
                                 ),
@@ -231,7 +231,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                           ),
                           SizedBox(height: 2.h,),
 
-                          CustomButton(title: 'START YOUR SUBSCRIPTION', onTap: () {  },
+                          CustomButton(
+                            title: 'START YOUR SUBSCRIPTION', onTap: () {  },
                             backgroundColor: AppColors.primaryDarkBlue,
                             textColor: AppColors.white,
                           )
@@ -241,7 +242,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                     ),
                   ),
 
-                  SizedBox(height: 2.h,),
+                  SizedBox(height: 1.h,),
 
                   Material(
                     elevation: 6,
@@ -265,20 +266,20 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                           Text(
                             "Download the Mobile\nApp to Start Receiving\nLeads",
                             style: TextStyle(
-                              fontSize: 17.sp,
+                              fontSize: 16.sp,
                               fontFamily: CustomFonts.bold,
                               color: AppColors.white,
                               height: 1.3,
                             ),
                           ),
 
-                          SizedBox(height: 1.5.h),
+                          SizedBox(height: 1.h),
 
 
                           Text(
                             "Manage your jobs, chat with clients,\nand upload portfolio shots on the go.",
                             style: TextStyle(
-                              fontSize: 15.sp,
+                              fontSize: 16.sp,
                               fontFamily: CustomFonts.regular,
                               color: AppColors.white.withOpacity(0.7),
                               height: 1.4,
@@ -301,8 +302,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                             child: Row(
                               children: [
                                 Container(
-                                  height: 30,
-                                  width: 30,
+                                  height: 7.w,
+                                  width: 7.w,
                                   color: Colors.white24,
                                 ),
                                 SizedBox(width: 3.w),
@@ -333,8 +334,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                             child: Row(
                               children: [
                                 Container(
-                                  height: 30,
-                                  width: 30,
+                                  height: 7.w,
+                                  width: 7.w,
                                   color: Colors.white24,
                                 ),
                                 SizedBox(width: 3.w),
@@ -374,7 +375,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 Text(
                                   "Scan to Download",
                                   style: TextStyle(
-                                    fontSize: 17.sp,
+                                    fontSize: 16.sp,
                                     fontFamily: CustomFonts.bold,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -404,8 +405,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Container(
-                              height: 70,
-                              width: 70,
+                              height: 10.w,
+                              width: 10.w,
                               decoration: BoxDecoration(
                                 color: AppColors.primaryDarkBlue.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(10),
@@ -448,7 +449,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               Icon(
                                 Icons.shield_outlined,
                                 color: AppColors.primaryDarkBlue,
-                                size: 22,
+                                size: 20.sp,
                               ),
                               SizedBox(width: 3.w),
 
@@ -459,7 +460,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     Text(
                                       "Secure Payments",
                                       style: TextStyle(
-                                        fontSize: 17.sp,
+                                        fontSize: 16.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -489,7 +490,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               Icon(
                                 Icons.flash_on_outlined,
                                 color: AppColors.primaryDarkBlue,
-                                size: 22,
+                                size: 20.sp,
                               ),
                               SizedBox(width: 3.w),
 
@@ -500,7 +501,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     Text(
                                       "Instant Activation",
                                       style: TextStyle(
-                                        fontSize: 17.sp,
+                                        fontSize: 16.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -530,7 +531,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               Icon(
                                 Icons.support_agent,
                                 color: AppColors.primaryDarkBlue,
-                                size: 22,
+                                size: 20.sp,
                               ),
                               SizedBox(width: 3.w),
 
@@ -541,7 +542,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     Text(
                                       "Premium Support",
                                       style: TextStyle(
-                                        fontSize: 17.sp,
+                                        fontSize: 16.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -582,7 +583,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
           Icon(
             Icons.check_circle,
             color: AppColors.primaryDarkBlue,
-            size: 18.sp,
+            size: 17.sp,
           ),
           SizedBox(width: 2.w),
           Expanded(

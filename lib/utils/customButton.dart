@@ -32,13 +32,13 @@ class CustomButton extends StatelessWidget {
         onTap: onTap,
         child: Container(
           width: width ?? double.infinity,
-          padding: EdgeInsets.symmetric(vertical: 1.8.h),
+          padding: EdgeInsets.symmetric(vertical: 1.2.h),
           child: Center(
             child: Text(
               title,
               style: TextStyle(
                 color: textColor,
-                fontSize: 16.sp,
+                fontSize: 15.sp,
                 fontFamily: CustomFonts.semiBold,
               ),
             ),

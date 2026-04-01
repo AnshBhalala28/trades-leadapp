@@ -74,15 +74,15 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                             Row(
                               children: [
                                 Container(
-                                  width: 3,
-                                  height: 18,
+                                  width: 1.w,
+                                  height: 3.h,
                                   color: AppColors.primaryDarkBlue,
                                 ),
                                 SizedBox(width: 2.w),
                                 Text(
                                   "MARKETPLACE ACTIVE",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.sp,
                                     fontFamily: CustomFonts.bold,
                                     color: AppColors.primaryDarkBlue
                                         .withOpacity(0.7),
@@ -99,14 +99,14 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 16.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                                 letterSpacing: 0.2,
                                 height: 1.1,
                               ),
                             ),
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Container(
                               padding: EdgeInsets.symmetric(
@@ -131,7 +131,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                   Text(
                                     "All Trade Types",
                                     style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 14.sp,
                                       fontFamily: CustomFonts.bold,
                                       color: AppColors.primaryDarkBlue,
                                     ),
@@ -142,10 +142,10 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 2.h),
+                      SizedBox(height: 1.h),
 
                       Container(
-                        padding: EdgeInsets.all(5.w),
+                        padding: EdgeInsets.all(4.w),
                         decoration: BoxDecoration(
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -174,8 +174,8 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               children: [
                                 Container(
                                   padding: EdgeInsets.symmetric(
-                                    horizontal: 3.w,
-                                    vertical: 0.8.h,
+                                    horizontal: 2.w,
+                                    vertical: 0.6.h,
                                   ),
                                   decoration: BoxDecoration(
                                     color: AppColors.primaryDarkBlue
@@ -187,7 +187,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     style: TextStyle(
                                       color: AppColors.primaryDarkBlue,
                                       fontFamily: CustomFonts.semiBold,
-                                      fontSize: 15.sp,
+                                      fontSize: 14.5.sp,
                                     ),
                                   ),
                                 ),
@@ -206,7 +206,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     Text(
                                       "£20.00",
                                       style: TextStyle(
-                                        fontSize: 20.sp,
+                                        fontSize: 18.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -216,12 +216,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Kitchen Extension",
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 16.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -232,13 +232,13 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Icon(
                                   Icons.location_on_outlined,
                                   color: AppColors.primaryDarkBlue,
-                                  size: 18.sp,
+                                  size: 17.sp,
                                 ),
                                 SizedBox(width: 1.w),
                                 Text(
                                   "Fulham, SW6",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.5.sp,
                                     fontFamily: CustomFonts.regular,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -246,12 +246,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Full structural extension for a Victorian terrace. Architect drawings approved. Looking for experienced masonry specialists.",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 color: AppColors.primaryDarkBlue,
                                 fontFamily: CustomFonts.regular,
                                 height: 1.5,
@@ -273,9 +273,9 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                         child: ClipOval(
                                           child: Image.network(
                                             "https://i.pravatar.cc/150?img=3",
-                                            // 🔥 Testing URL
-                                            width: 36,
-                                            height: 36,
+
+                                            width: 8.w,
+                                            height: 8.w,
                                             fit: BoxFit.cover,
                                             loadingBuilder:
                                                 (context, child, progress) {
@@ -301,7 +301,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                                   return Icon(
                                                     Icons.person,
                                                     color: Colors.grey,
-                                                    size: 20,
+                                                    size: 18.sp,
                                                   );
                                                 },
                                           ),
@@ -327,7 +327,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 35.w,
+                                  width: 28.w,
                                   child: CustomButton(
                                     title: "Buy Lead",
                                     onTap: () {
@@ -343,7 +343,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 2.h),
+                      SizedBox(height: 1.h),
 
                       Container(
                         padding: EdgeInsets.all(5.w),
@@ -387,7 +387,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     style: TextStyle(
                                       color: AppColors.green,
                                       fontFamily: CustomFonts.semiBold,
-                                      fontSize: 15.sp,
+                                      fontSize: 14.5.sp,
                                     ),
                                   ),
                                 ),
@@ -399,17 +399,17 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                   child: Icon(
                                     Icons.check_circle,
                                     color: AppColors.green,
-                                  ),
+                                  size: 18.sp,),
                                 ),
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Bespoke Garden Office",
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 16.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -420,13 +420,13 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Icon(
                                   Icons.location_on_outlined,
                                   color: AppColors.primaryDarkBlue,
-                                  size: 18.sp,
+                                  size: 17.sp,
                                 ),
                                 SizedBox(width: 1.w),
                                 Text(
                                   "Richmond, TW10",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.5.sp,
                                     fontFamily: CustomFonts.regular,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -434,12 +434,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Timber-framed insulated garden studio with electrical fit-out. You were selected for this job. Review project details and confirm start date.",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 color: AppColors.primaryDarkBlue,
                                 fontFamily: CustomFonts.regular,
                                 height: 1.5,
@@ -459,7 +459,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 14.5.sp,
                                       color: AppColors.grey,
                                       fontFamily: CustomFonts.semiBold,
                                     ),
@@ -469,7 +469,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 SizedBox(width: 8),
 
                                 SizedBox(
-                                  width: 35.w,
+                                  width: 28.w,
                                   child: CustomButton(
                                     title: "View Details",
                                     onTap: () {
@@ -537,12 +537,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Re-wiring 3-Bed Semi",
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 16.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -559,7 +559,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Text(
                                   "Clapham, SW4",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.5.sp,
                                     fontFamily: CustomFonts.regular,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -567,12 +567,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Complete electrical re-wiring of a residential property. All sockets and lighting fixtures included in scope.",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 color: AppColors.primaryDarkBlue,
                                 fontFamily: CustomFonts.regular,
                                 height: 1.5,
@@ -657,7 +657,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     Text(
                                       "£15.00",
                                       style: TextStyle(
-                                        fontSize: 20.sp,
+                                        fontSize: 18.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -667,12 +667,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Emergency Roof Leak",
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 16.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -683,13 +683,13 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Icon(
                                   Icons.location_on_outlined,
                                   color: AppColors.primaryDarkBlue,
-                                  size: 18.sp,
+                                  size: 17.sp,
                                 ),
                                 SizedBox(width: 1.w),
                                 Text(
                                   "Wimbledon, SW19",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.5.sp,
                                     fontFamily: CustomFonts.regular,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -697,12 +697,12 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                               ],
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "Urgent repair required for flat roof after heavy storm. Potential insurance claim. High priority response needed today.",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 color: AppColors.primaryDarkBlue,
                                 fontFamily: CustomFonts.regular,
                                 height: 1.5,
@@ -729,7 +729,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                     style: TextStyle(
                                       color: AppColors.red,
                                       fontFamily: CustomFonts.semiBold,
-                                      fontSize: 15.sp,
+                                      fontSize: 14.5.sp,
                                     ),
                                   ),
                                 ),
@@ -737,7 +737,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 SizedBox(width: 8),
 
                                 SizedBox(
-                                  width: 35.w,
+                                  width: 28.w,
                                   child: CustomButton(
                                     title: "Claim Lead",
                                     onTap: () {
@@ -773,11 +773,11 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                           children: [
                             Positioned(
                               right: 0,
-                              top: -19,
+                              top: -1,
                               child: Text(
                                 rating.toString(),
                                 style: TextStyle(
-                                  fontSize: 35.sp,
+                                  fontSize: 22.sp,
                                   fontFamily: CustomFonts.semiBold,
                                   color: AppColors.blue.withOpacity(0.2),
                                 ),
@@ -790,7 +790,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Text(
                                   "MARKET PERFORMANCE",
                                   style: TextStyle(
-                                    fontSize: 15.5.sp,
+                                    fontSize: 15.sp,
                                     letterSpacing: 1.2,
                                     color: AppColors.grey,
                                     fontFamily: CustomFonts.semiBold,
@@ -802,7 +802,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Text(
                                   "Expertise Rating",
                                   style: TextStyle(
-                                    fontSize: 17.sp,
+                                    fontSize: 16.sp,
                                     fontFamily: CustomFonts.bold,
                                     color: AppColors.primaryDarkBlue,
                                   ),
@@ -813,7 +813,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                 Text(
                                   "Your profile is currently outperforming 85% of local tradespeople in your category.",
                                   style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 14.5.sp,
                                     color: AppColors.primaryDarkBlue,
                                     fontFamily: CustomFonts.regular,
                                   ),
@@ -834,7 +834,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                                             ? Icons.star
                                             : Icons.star_border,
                                         color: AppColors.primaryDarkBlue,
-                                        size: 22.sp,
+                                        size: 20.sp,
                                       ),
                                     );
                                   }),
@@ -867,27 +867,27 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                             Icon(
                               Icons.insights_outlined,
                               color: AppColors.white.withOpacity(0.7),
-                              size: 22.sp,
+                              size: 19.sp,
                             ),
 
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 1.h),
 
                             Text(
                               "CONVERSION TIP",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 fontFamily: CustomFonts.semiBold,
                                 color: AppColors.white.withOpacity(0.6),
                                 letterSpacing: 1.2,
                               ),
                             ),
 
-                            SizedBox(height: 1.h),
+                            SizedBox(height: 0.5.h),
 
                             Text(
                               "Adding detailed before/after photos increases your selection rate by 40%.",
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 15.5.sp,
                                 fontFamily: CustomFonts.regular,
                                 color: AppColors.white,
                                 height: 1.4,
@@ -897,7 +897,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 12.h),
+                      SizedBox(height: 5.h),
                     ],
                   ).paddingSymmetric(horizontal: 4.w),
                 ),

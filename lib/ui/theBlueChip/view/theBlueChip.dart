@@ -102,7 +102,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                             Text(
                               "WORKSPACE",
                               style: TextStyle(
-                                fontSize: 15.sp,
+                                fontSize: 14.5.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -113,7 +113,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 15.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                                 letterSpacing: 0.5,
@@ -125,7 +125,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                               children: [
                                 Container(
                                   padding: EdgeInsets.symmetric(
-                                    horizontal: 4.w,
+                                    horizontal: 3.w,
                                     vertical: 1.h,
                                   ),
                                   decoration: BoxDecoration(
@@ -138,7 +138,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                       Text(
                                         "14",
                                         style: TextStyle(
-                                          fontSize: 14.sp,
+                                          fontSize: 14.5.sp,
                                           fontFamily: CustomFonts.semiBold,
                                           color: AppColors.white,
                                         ),
@@ -227,7 +227,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                     child: Text(
                                       leads[i].title,
                                       style: TextStyle(
-                                        fontSize: 16.sp,
+                                        fontSize: 15.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -236,7 +236,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                   Text(
                                     leads[i].price,
                                     style: TextStyle(
-                                      fontSize: 16.sp,
+                                      fontSize: 14.5.sp,
                                       fontFamily: CustomFonts.bold,
                                       color: AppColors.primaryDarkBlue,
                                     ),
@@ -250,7 +250,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                 children: [
                                   Icon(
                                     Icons.location_on_outlined,
-                                    size: 20.sp,
+                                    size: 18.sp,
                                     color: AppColors.primaryDarkBlue,
                                   ),
                                   SizedBox(width: 2.w),
@@ -273,7 +273,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                     leads[i].isUrgent
                                         ? Icons.error_outline
                                         : Icons.calendar_today_outlined,
-                                    size: 20.sp,
+                                    size: 18.sp,
                                     color: leads[i].isUrgent
                                         ? Colors.red
                                         : AppColors.primaryDarkBlue,
@@ -289,7 +289,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                       fontFamily: leads[i].isUrgent
                                           ? CustomFonts.bold
                                           : CustomFonts.regular,
-                                      fontSize: 14.sp,
+                                      fontSize: 14.5.sp,
                                     ),
                                   ),
                                 ],
@@ -301,6 +301,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                 children: [
                                   Expanded(
                                     child: CustomButton(
+                                     width: 28.w,
                                       title: "Message",
                                       backgroundColor:
                                           AppColors.primaryDarkBlue,

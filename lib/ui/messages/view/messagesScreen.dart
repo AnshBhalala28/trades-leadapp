@@ -84,8 +84,6 @@ class _MessagesScreenState extends State<MessagesScreen> {
                         ? CrossAxisAlignment.end
                         : CrossAxisAlignment.start,
                     children: [
-
-
                       Container(
                         margin: EdgeInsets.only(
                           top: 1.h,

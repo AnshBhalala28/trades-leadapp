@@ -49,7 +49,7 @@ class CustomAppBar extends StatelessWidget {
                   fontFamily: CustomFonts.bold,
                   fontWeight: FontWeight.bold,
                   color: AppColors.white,
-                  fontSize: 20.sp,
+                  fontSize: 18.sp,
                 ),
               ),
               showDrawer
@@ -60,7 +60,7 @@ class CustomAppBar extends StatelessWidget {
                       child: Icon(
                         Icons.menu,
                         color: AppColors.white,
-                        size: 26.sp,
+                        size: 25.sp,
                       ),
                     )
                   : Icon(null),

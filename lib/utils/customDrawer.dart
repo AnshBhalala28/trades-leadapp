@@ -59,8 +59,8 @@ class _drawer1State extends State<drawer1> {
                         vertical: 1.h,
                         horizontal: 2.w,
                       ),
-                      height: 30.w,
-                      width: 30.w,
+                      height: 20.w,
+                      width: 20.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(
@@ -95,6 +95,19 @@ class _drawer1State extends State<drawer1> {
                           width: 40.w,
                           child: Text(
                             "Aryan Patel",
+                            style: TextStyle(
+                              letterSpacing: 1,
+                              color: AppColors.primaryDarkBlue,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.normal,
+                              fontFamily: CustomFonts.bold,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 40.w,
+                          child: Text(
+                            "AryanPatel@gmail.com",
                             style: TextStyle(
                               letterSpacing: 1,
                               color: AppColors.primaryDarkBlue,
