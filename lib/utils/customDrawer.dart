@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/home/homeScreen_One.dart';
+import 'package:tradesleadapp/ui/leads/view/availableLeadScreen.dart';
+import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
+import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
 import 'package:tradesleadapp/ui/profile/view/profileScreen.dart';
+import 'package:tradesleadapp/ui/requestQuote/view/requestQuote.dart';
+import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
+import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class drawer1 extends StatefulWidget {
@@ -71,7 +78,9 @@ class _drawer1State extends State<drawer1> {
                               Container(
                                 alignment: Alignment.center,
                                 child: Center(
-                                  child: CircularProgressIndicator(),
+                                  child: CircularProgressIndicator(
+                                    color: AppColors.primaryDarkBlue,
+                                  ),
                                 ),
                               ),
                           errorWidget: (context, url, error) =>
@@ -102,7 +111,7 @@ class _drawer1State extends State<drawer1> {
                 Divider(color: Colors.grey, thickness: 3.sp),
                 InkWell(
                   onTap: () {
-                    // Get.to(HomeScreen());
+                     Get.to(homeScreen_one());
                   },
                   child: Container(
                     child: Row(
@@ -155,7 +164,7 @@ class _drawer1State extends State<drawer1> {
                 SizedBox(height: 2.h),
                 InkWell(
                   onTap: () {
-                    // Get.to(PremiumScreen());
+                     Get.to(()=> AvailableLeadScreen());
                   },
                   child: Container(
                     child: Row(
@@ -177,14 +186,14 @@ class _drawer1State extends State<drawer1> {
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                     child: Icon(
-                                      Icons.paid,
+                                      Icons.group,
                                       color: AppColors.white,
                                       size: 18.sp,
                                     ),
                                   ),
                                   SizedBox(width: 2.w),
                                   Text(
-                                    "Get Premium",
+                                    "Lead",
                                     style: TextStyle(
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,
@@ -209,7 +218,7 @@ class _drawer1State extends State<drawer1> {
 
                 InkWell(
                   onTap: () {
-                    // Get.to(SubscriptionAlarmScreen());
+                     Get.to(MessagesScreen());
                   },
                   child: Container(
                     child: Row(
@@ -231,14 +240,14 @@ class _drawer1State extends State<drawer1> {
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                     child: Icon(
-                                      Icons.add_alert_rounded,
+                                      Icons.chat,
                                       color: AppColors.white,
                                       size: 18.sp,
                                     ),
                                   ),
                                   SizedBox(width: 2.w),
                                   Text(
-                                    "Add Alerts",
+                                    "Chats",
                                     style: TextStyle(
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,
@@ -263,7 +272,7 @@ class _drawer1State extends State<drawer1> {
 
                 InkWell(
                   onTap: () {
-                    // Get.to(UpdateAlarmScreen());
+                     Get.to(MyJobPostScreen1());
                   },
                   child: Container(
                     child: Row(
@@ -285,14 +294,68 @@ class _drawer1State extends State<drawer1> {
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                     child: Icon(
-                                      CupertinoIcons.bell_fill,
+                                      CupertinoIcons.building_2_fill,
                                       color: AppColors.white,
                                       size: 18.sp,
                                     ),
                                   ),
                                   SizedBox(width: 2.w),
                                   Text(
-                                    "Alerts",
+                                    "My Job Posts",
+                                    style: TextStyle(
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w500,
+                                     fontFamily: CustomFonts.bold,
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Icon(
+                                Icons.chevron_right_rounded,
+                                color: AppColors.primaryDarkBlue,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 2.h),
+
+                InkWell(
+                  onTap: () {
+                    Get.to(TheBlueChipScreen());
+                  },
+                  child: Container(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 6.w),
+                        Container(
+                          width: 64.w,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 10.w,
+                                    height: 10.w,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                    child: Icon(
+                                      Icons.verified,
+                                      color: AppColors.white,
+                                      size: 18.sp,
+                                    ),
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Text(
+                                    "The Blue Chip",
                                     style: TextStyle(
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,
@@ -316,60 +379,7 @@ class _drawer1State extends State<drawer1> {
                 SizedBox(height: 2.h),
                 InkWell(
                   onTap: () {
-                    // Get.to(AllPositionScreen());
-                  },
-                  child: Container(
-                    child: Row(
-                      children: [
-                        SizedBox(width: 6.w),
-                        Container(
-                          width: 64.w,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 10.w,
-                                    height: 10.w,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: AppColors.primaryDarkBlue,
-                                    ),
-                                    child: Icon(
-                                      Icons.add_location,
-                                      color: AppColors.white,
-                                      size: 18.sp,
-                                    ),
-                                  ),
-                                  SizedBox(width: 2.w),
-                                  Text(
-                                    "Nearby",
-                                    style: TextStyle(
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.w500,
-                                     fontFamily: CustomFonts.bold,
-                                      color: AppColors.primaryDarkBlue,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Icon(
-                                Icons.chevron_right_rounded,
-                                color: AppColors.primaryDarkBlue,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(height: 2.h),
-                InkWell(
-                  onTap: () {
-                    // Get.to(AddMarinaScreen());
+                    Get.to(RequestQuoteScreen());
                   },
                   child: Container(
                     child: Row(
@@ -392,14 +402,14 @@ class _drawer1State extends State<drawer1> {
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                     child: Icon(
-                                      Icons.add,
+                                      Icons.request_quote,
                                       color: AppColors.white,
                                       size: 18.sp,
                                     ),
                                   ),
                                   SizedBox(width: 2.w),
                                   Text(
-                                    "Add Position",
+                                    "Request Quote",
                                     style: TextStyle(
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,
@@ -424,7 +434,7 @@ class _drawer1State extends State<drawer1> {
                 SizedBox(height: 2.h),
                 InkWell(
                   onTap: () {
-                    // Get.to(MyMarinaListScreen());
+                     Get.to(SubscriptionScreen());
                   },
                   child: Container(
                     child: Row(
@@ -447,14 +457,14 @@ class _drawer1State extends State<drawer1> {
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                     child: Icon(
-                                      Icons.add_location,
+                                      Icons.workspace_premium_outlined,
                                       color: AppColors.white,
                                       size: 18.sp,
                                     ),
                                   ),
                                   SizedBox(width: 2.w),
                                   Text(
-                                    "Mine",
+                                    "Subscription",
                                     style: TextStyle(
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,

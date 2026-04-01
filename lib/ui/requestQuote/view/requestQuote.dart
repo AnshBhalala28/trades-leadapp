@@ -101,12 +101,13 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
         selectedDate = picked;
       });
     }
-  }
+  }final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: drawer1(),
+      key: scaffoldKey,
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [

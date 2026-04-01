@@ -8,6 +8,7 @@ import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class MyJobPostScreen1 extends StatefulWidget {
@@ -26,7 +27,7 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer: CustomDrawer(),
+      drawer: drawer1(),
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [

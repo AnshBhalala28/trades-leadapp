@@ -8,6 +8,7 @@ import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class TheBlueChipScreen extends StatefulWidget {
@@ -59,20 +60,19 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
       isUrgent: true,
     ),
   ];
-
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: drawer1(),
       backgroundColor: AppColors.backGround,
       body: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               CustomAppBar(title: "The Blue Chip",showBack: true,showDrawer: true,),
-
-
               SizedBox(height: 2.h),
               Expanded(
                 child: SingleChildScrollView(

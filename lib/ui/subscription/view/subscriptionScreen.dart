@@ -4,6 +4,7 @@ import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
+import 'package:tradesleadapp/utils/customDrawer.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class SubscriptionScreen extends StatefulWidget {
@@ -12,10 +13,13 @@ class SubscriptionScreen extends StatefulWidget {
 }
 
 class _SubscriptionScreenState extends State<SubscriptionScreen> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backGround,
+      key: scaffoldKey,
+      drawer: drawer1(),
       body: Column(
         children: [
           CustomAppBar(title: "Subscription Plans",showBack: true,showDrawer: true,),
