@@ -59,9 +59,12 @@ class CustomInputField extends StatelessWidget {
                   fontSize: 15.5.sp,
                   color: AppColors.primaryDarkBlue,
                 ),
-                prefixIcon: Icon(
-                  icon,
-                  color: AppColors.primaryDarkBlue,
+                prefixIcon: Padding(
+                  padding:  EdgeInsets.only(bottom: maxLines > 1 ? 50 : 0),
+                  child: Icon(
+                    icon,
+                    color: AppColors.primaryDarkBlue,
+                  ),
                 ),
                 filled: true,
                 fillColor: AppColors.white,

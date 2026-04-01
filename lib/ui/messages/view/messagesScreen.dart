@@ -152,30 +152,14 @@ class _MessagesScreenState extends State<MessagesScreen> {
     );
   }
 
-  // 🔹 Bottom Input (UI SAME + Working Send 🔥)
+
   Widget buildMessageInput() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.5.h),
-      decoration: BoxDecoration(
-        color: AppColors.backGround,
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.2),
-            blurRadius: 10,
-            offset: Offset(0, -2),
-          ),
-        ],
-      ),
+
+      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
+      color: Colors.transparent,
       child: Row(
         children: [
-          // ➕ Button
-          // CircleAvatar(
-          //   backgroundColor: AppColors.primaryDarkBlue,
-          //   child: Icon(Icons.add, color: AppColors.white, size: 20.sp),
-          // ),
-          //
-          // SizedBox(width: 3.w),
-
           // 🔹 Input Field
           Expanded(
             child: Container(
@@ -183,6 +167,15 @@ class _MessagesScreenState extends State<MessagesScreen> {
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(30),
+
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.black.withOpacity(0.1),
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                    offset: Offset(0, 4),
+                  ),
+                ],
               ),
               child: TextField(
                 controller: _controller,
@@ -191,7 +184,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                   border: InputBorder.none,
                   hintStyle: TextStyle(
                     fontSize: 15.sp,
-                    color: AppColors.primaryDarkBlue,
+                    color: AppColors.primaryDarkBlue.withOpacity(0.5),
                     fontFamily: CustomFonts.regular,
                   ),
                 ),
@@ -201,11 +194,25 @@ class _MessagesScreenState extends State<MessagesScreen> {
 
           SizedBox(width: 3.w),
 
+          // 🔹 Send Button
           GestureDetector(
             onTap: sendMessage,
-            child: CircleAvatar(
-              backgroundColor: AppColors.primaryDarkBlue,
-              child: Icon(Icons.send, color: AppColors.white, size: 18.sp),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primaryDarkBlue.withOpacity(0.3),
+                    blurRadius: 8,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: CircleAvatar(
+                radius: 25, // સાઈઝ જરૂર મુજબ સેટ કરવી
+                backgroundColor: AppColors.primaryDarkBlue,
+                child: Icon(Icons.send, color: AppColors.white, size: 18.sp),
+              ),
             ),
           ),
         ],

@@ -225,7 +225,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
                         // ✅ FIX
                         icon: CupertinoIcons.doc,
                         inputType: TextInputType.text,
-                        maxLines: 5,
+                        maxLines: 3,
                       ),
 
                       SizedBox(height: 2.h),

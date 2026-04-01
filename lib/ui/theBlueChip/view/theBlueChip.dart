@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tradesleadapp/ui/messages/messagesScreen.dart';
+import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/importantStrings.dart';
 
@@ -101,7 +101,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                             Text(
                               "WORKSPACE",
                               style: TextStyle(
-                                fontSize: 16.sp,
+                                fontSize: 15.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                               ),
@@ -112,7 +112,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontSize: 20.sp,
+                                fontSize: 17.sp,
                                 fontFamily: CustomFonts.bold,
                                 color: AppColors.primaryDarkBlue,
                                 letterSpacing: 0.5,
@@ -172,7 +172,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                     child: Text(
                                       leads[i].title,
                                       style: TextStyle(
-                                        fontSize: 17.sp,
+                                        fontSize: 16.sp,
                                         fontFamily: CustomFonts.bold,
                                         color: AppColors.primaryDarkBlue,
                                       ),
@@ -181,7 +181,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                   Text(
                                     leads[i].price,
                                     style: TextStyle(
-                                      fontSize: 16.5.sp,
+                                      fontSize: 16.sp,
                                       fontFamily: CustomFonts.bold,
                                       color: AppColors.primaryDarkBlue,
                                     ),
@@ -234,7 +234,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                                       fontFamily: leads[i].isUrgent
                                           ? CustomFonts.bold
                                           : CustomFonts.regular,
-                                      fontSize: 15.sp,
+                                      fontSize: 14.sp,
                                     ),
                                   ),
                                 ],

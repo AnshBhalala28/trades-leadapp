@@ -77,7 +77,7 @@ Widget TitleBar({
   return SafeArea(
     bottom: false,
     child: Material(
-      elevation: 6,
+      elevation: 0,
       child: Container(
         // Wrapped in SafeArea so it doesn't overlap the top status bar (notch area)
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),

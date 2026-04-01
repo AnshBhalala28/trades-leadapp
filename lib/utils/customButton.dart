@@ -24,26 +24,22 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: backgroundColor,
-      elevation: 5.0, // 🔥 REAL elevation (upshelu look)
+      elevation: 5.0,
       borderRadius: BorderRadius.circular(15),
       shadowColor: Colors.black.withOpacity(0.25),
-
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
         onTap: onTap,
-
         child: Container(
           width: width ?? double.infinity,
           padding: EdgeInsets.symmetric(vertical: 1.8.h),
-
           child: Center(
             child: Text(
               title,
               style: TextStyle(
                 color: textColor,
-                fontSize: 17.sp,
+                fontSize: 16.sp,
                 fontFamily: CustomFonts.semiBold,
-
               ),
             ),
           ),
