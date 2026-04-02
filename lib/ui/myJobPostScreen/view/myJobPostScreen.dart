@@ -715,7 +715,7 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
         backgroundColor: AppColors.primaryDarkBlue,
         child: Icon(Icons.add, color: Colors.white),
       ),
-      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 2,),
     );
   }
 }

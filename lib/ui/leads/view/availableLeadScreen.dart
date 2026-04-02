@@ -914,7 +914,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
         backgroundColor: AppColors.primaryDarkBlue,
         child: Icon(Icons.add, color: Colors.white),
       ),
-      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 1,),
     );
   }
 }

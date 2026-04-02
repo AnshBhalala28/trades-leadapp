@@ -263,7 +263,7 @@ class _SingnUpScreenState extends State<SingnUpScreen> {
                                   fontFamily: CustomFonts.regular,
                                   letterSpacing: 1,
                                   color: Colors.white,
-                                  fontSize: 18.sp,
+                                  fontSize: 16.sp,
                                 ),
                               ),
                               Icon(Icons.arrow_forward, color: Colors.white),

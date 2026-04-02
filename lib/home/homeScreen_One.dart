@@ -626,7 +626,7 @@ class _homeScreen_oneState extends State<homeScreen_one> {
         onPressed: () {},
         child: Icon(Icons.add, color: Colors.white),
       ),
-      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0, ),
     );
   }
 }
