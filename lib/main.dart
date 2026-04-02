@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/auth/view/SinupScreen.dart';
+import 'package:tradesleadapp/ui/welcome/welcome_Screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             primarySwatch: Colors.blue,
           ),
-          home: SingnUpScreen(),
+          home: WelcomeScreen(),
 
         );
       },
