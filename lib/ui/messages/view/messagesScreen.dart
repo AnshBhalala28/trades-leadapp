@@ -123,8 +123,6 @@ class _MessagesScreenState extends State<MessagesScreen> {
                           ),
                         ),
                       ),
-
-
                       Padding(
                         padding: EdgeInsets.only(
                             bottom: 1.5.h, left: 1.w, right: 1.w),

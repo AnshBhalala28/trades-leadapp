@@ -212,8 +212,8 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                             print("Clicked");
                                           },
                                           child: Container(
-                                            height: 45,
-                                            width: 45,
+                                            height: 6.h,
+                                            width: 6.h,
                                             decoration: BoxDecoration(
                                               color: AppColors.primaryDarkBlue,
                                               shape: BoxShape.circle,
@@ -406,8 +406,8 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                             print("Clicked");
                                           },
                                           child: Container(
-                                            height: 45,
-                                            width: 45,
+                                            height: 6.h,
+                                            width: 6.h,
                                             decoration: BoxDecoration(
                                               color: AppColors.primaryDarkBlue,
                                               shape: BoxShape.circle,
@@ -577,8 +577,8 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                             print("Clicked");
                                           },
                                           child: Container(
-                                            height: 45,
-                                            width: 45,
+                                            height: 6.h,
+                                            width: 6.h,
                                             decoration: BoxDecoration(
                                               color: AppColors.primaryDarkBlue,
                                               shape: BoxShape.circle,
@@ -692,13 +692,9 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ),
                               ),
                             ),
-
                         ],
                       ),
                       SizedBox(height: 3.h),
-
-
-                      SizedBox(height: 5.h),
                     ],
                   ).paddingSymmetric(horizontal: 4.w),
                 ),

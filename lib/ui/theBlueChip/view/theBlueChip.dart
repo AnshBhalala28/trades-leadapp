@@ -334,7 +334,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
                 ),
               ),
 
-              SizedBox(height: 5.h),
+
             ],
           ),
         ],

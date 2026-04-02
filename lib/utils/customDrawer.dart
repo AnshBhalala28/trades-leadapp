@@ -5,9 +5,11 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/home/homeScreen_One.dart';
+import 'package:tradesleadapp/ui/followup/view/followUpScreen.dart';
 import 'package:tradesleadapp/ui/leads/view/availableLeadScreen.dart';
 import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
 import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
+import 'package:tradesleadapp/ui/payment/view/paymentScreen.dart';
 import 'package:tradesleadapp/ui/profile/view/profileScreen.dart';
 import 'package:tradesleadapp/ui/requestQuote/view/requestQuote.dart';
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
@@ -535,6 +537,112 @@ class _drawer1State extends State<drawer1> {
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w500,
                                      fontFamily: CustomFonts.bold,
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Icon(
+                                Icons.chevron_right_rounded,
+                                color: AppColors.primaryDarkBlue,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 2.h),
+                InkWell(
+                  onTap: () {
+                    Get.to(PaymentScreen());
+                  },
+                  child: Container(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 6.w),
+                        Container(
+                          width: 64.w,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 10.w,
+                                    height: 10.w,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                    child: Icon(
+                                      CupertinoIcons.creditcard,
+                                      color: AppColors.white,
+                                      size: 18.sp,
+                                    ),
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Text(
+                                    "Payment",
+                                    style: TextStyle(
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: CustomFonts.bold,
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Icon(
+                                Icons.chevron_right_rounded,
+                                color: AppColors.primaryDarkBlue,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 2.h),
+                InkWell(
+                  onTap: () {
+                    Get.to(FollowUpScreen());
+                  },
+                  child: Container(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 6.w),
+                        Container(
+                          width: 64.w,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 10.w,
+                                    height: 10.w,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: AppColors.primaryDarkBlue,
+                                    ),
+                                    child: Icon(
+                                      CupertinoIcons.loop,
+                                      color: AppColors.white,
+                                      size: 18.sp,
+                                    ),
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Text(
+                                    "Follow Up",
+                                    style: TextStyle(
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: CustomFonts.bold,
                                       color: AppColors.primaryDarkBlue,
                                     ),
                                   ),

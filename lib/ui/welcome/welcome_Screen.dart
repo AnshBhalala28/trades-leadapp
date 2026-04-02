@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/ui/auth/view/LoginScreen.dart';
 
 import '../../utils/importantStrings.dart';
 import '../auth/view/SinupScreen.dart';
@@ -126,14 +127,14 @@ class WelcomeScreen extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff0D2B52),
+                        backgroundColor: AppColors.primaryDarkBlue,
                         padding: EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       onPressed: () {
-                        Get.to(SingnUpScreen());
+                        Get.to(LoginScreen());
                       },
                       child: Text(
                         "Get Started",

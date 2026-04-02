@@ -26,7 +26,7 @@ class CustomBottomBar extends StatefulWidget {
 class _CustomBottomBarState extends State<CustomBottomBar> {
 
   Future<void> _navigate(int index) async {
-
+    // 👉 same tab click ignore
     if (index == widget.currentIndex) return;
 
     switch (index) {
@@ -57,7 +57,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -80,7 +80,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xffE8EEF9) : Colors.transparent,
+          color: isSelected ?  Color(0xffE8EEF9) : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -96,11 +96,11 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
             Text(
               label,
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 14.sp,
                 color: isSelected
                     ? AppColors.primaryDarkBlue
                     : AppColors.black,
-                fontWeight: FontWeight.w600,
+                fontFamily: CustomFonts.bold ,
               ),
             ),
           ],

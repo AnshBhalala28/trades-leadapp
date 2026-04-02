@@ -10,6 +10,7 @@ class CustomButton extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final double? width;
+  final double? height;
 
   const CustomButton({
     super.key,
@@ -18,6 +19,7 @@ class CustomButton extends StatelessWidget {
     this.backgroundColor = AppColors.primaryDarkBlue,
     this.textColor = AppColors.white,
     this.width,
+    this.height,
   });
 
   @override
@@ -25,20 +27,21 @@ class CustomButton extends StatelessWidget {
     return Material(
       color: backgroundColor,
       elevation: 5.0,
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(50),
       shadowColor: Colors.black.withOpacity(0.25),
       child: InkWell(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(50),
         onTap: onTap,
         child: Container(
-          width: width ?? double.infinity,
+            height: height ?? 6.h,
+          width: width ,
           padding: EdgeInsets.symmetric(vertical: 1.2.h),
           child: Center(
             child: Text(
               title,
               style: TextStyle(
                 color: textColor,
-                fontSize: 15.sp,
+                fontSize: 17.sp,
                 fontFamily: CustomFonts.semiBold,
               ),
             ),
