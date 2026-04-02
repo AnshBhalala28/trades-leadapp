@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tradesleadapp/utils/importantStrings.dart';
 
 class CustomBottomBar extends StatefulWidget {
   final int currentIndex;
-  final Function(int) onTap;
+  final Function(int)? onTap;
 
   const CustomBottomBar({
     super.key,
     required this.currentIndex,
-    required this.onTap,
+     this.onTap,
   });
 
   @override
@@ -41,10 +43,10 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
 
     return GestureDetector(
       onTap: () {
-        widget.onTap(index);
+        // widget.onTap(index);
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        padding:  EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xffE8EEF9) : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
@@ -54,14 +56,14 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
           children: [
             Icon(
               icon,
-              color: isSelected ? const Color(0xff0A2540) : Colors.grey,
+              color: isSelected ? AppColors.primaryDarkBlue : AppColors.black,
             ),
             const SizedBox(height: 4),
             Text(
               label,
               style: TextStyle(
                 fontSize: 10,
-                color: isSelected ? const Color(0xff0A2540) : Colors.grey,
+                color: isSelected ? AppColors.primaryDarkBlue : AppColors.black,
                 fontWeight: FontWeight.w600,
               ),
             ),
