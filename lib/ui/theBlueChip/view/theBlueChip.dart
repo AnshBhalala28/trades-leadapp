@@ -6,6 +6,7 @@ import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/messages/view/messagesScreen.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/customDrawer.dart';
@@ -338,6 +339,7 @@ class _TheBlueChipScreenState extends State<TheBlueChipScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
     );
   }
 

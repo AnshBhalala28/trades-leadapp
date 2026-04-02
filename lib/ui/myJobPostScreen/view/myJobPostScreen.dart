@@ -6,6 +6,7 @@ import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/customDrawer.dart';
@@ -189,22 +190,42 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                   ),
                                 ],
                               ),
-
-                              // 👉 Bottom space button mate
-                              child: Padding(
-                                padding: EdgeInsets.only(bottom: 6.h),
-                                child: Column(
+                              child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      "Status: Active",
-                                      style: TextStyle(
-                                        fontSize: 15.sp,
-                                        fontFamily: CustomFonts.bold,
-                                        color: AppColors.primaryDarkBlue
-                                            .withOpacity(0.7),
-                                        letterSpacing: 1.2,
-                                      ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "Status: Active",
+                                          style: TextStyle(
+                                            fontSize: 15.sp,
+                                            fontFamily: CustomFonts.bold,
+                                            color: AppColors.primaryDarkBlue
+                                                .withOpacity(0.7),
+                                            letterSpacing: 1.2,
+                                          ),
+                                        ),
+
+                                        GestureDetector(
+                                          onTap: () {
+                                            print("Clicked");
+                                          },
+                                          child: Container(
+                                            height: 45,
+                                            width: 45,
+                                            decoration: BoxDecoration(
+                                              color: AppColors.primaryDarkBlue,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Icon(
+                                              Icons.arrow_forward_rounded,
+                                              size: 20.sp,
+                                              color: AppColors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
 
                                     SizedBox(height: 1.h),
@@ -330,30 +351,6 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ),
                               ),
                             ),
-                          ),
-
-                          Positioned(
-                            bottom: 2.h,
-                            right: 5.w,
-                            child: GestureDetector(
-                              onTap: () {
-                                print("Clicked");
-                              },
-                              child: Container(
-                                height: 45,
-                                width: 45,
-                                decoration: BoxDecoration(
-                                  color: AppColors.primaryDarkBlue,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.arrow_forward_rounded,
-                                  size: 20.sp,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                       SizedBox(height: 2.h),
@@ -388,20 +385,41 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ],
                               ),
 
-                              child: Padding(
-                                padding: EdgeInsets.only(bottom: 6.h),
-                                child: Column(
+                              child:  Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      "STATUS: QUOTING",
-                                      style: TextStyle(
-                                        fontSize: 15.sp,
-                                        fontFamily: CustomFonts.bold,
-                                        color: AppColors.primaryDarkBlue
-                                            .withOpacity(0.7),
-                                        letterSpacing: 1.2,
-                                      ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "STATUS: QUOTING",
+                                          style: TextStyle(
+                                            fontSize: 15.sp,
+                                            fontFamily: CustomFonts.bold,
+                                            color: AppColors.primaryDarkBlue
+                                                .withOpacity(0.7),
+                                            letterSpacing: 1.2,
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            print("Clicked");
+                                          },
+                                          child: Container(
+                                            height: 45,
+                                            width: 45,
+                                            decoration: BoxDecoration(
+                                              color: AppColors.primaryDarkBlue,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Icon(
+                                              Icons.arrow_forward_rounded,
+                                              size: 20.sp,
+                                              color: AppColors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
 
                                     SizedBox(height: 1.h),
@@ -503,30 +521,6 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ),
                               ),
                             ),
-                          ),
-
-                          Positioned(
-                            bottom: 2.h,
-                            right: 5.w,
-                            child: GestureDetector(
-                              onTap: () {
-                                print("Clicked");
-                              },
-                              child: Container(
-                                height: 45,
-                                width: 45,
-                                decoration: BoxDecoration(
-                                  color: AppColors.primaryDarkBlue,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.arrow_forward_rounded,
-                                  size: 20.sp,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
 
@@ -562,20 +556,41 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ],
                               ),
 
-                              child: Padding(
-                                padding: EdgeInsets.only(bottom: 6.h),
-                                child: Column(
+                              child:  Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      "STATUS: COMPLETED",
-                                      style: TextStyle(
-                                        fontSize: 15.sp,
-                                        fontFamily: CustomFonts.bold,
-                                        color: AppColors.primaryDarkBlue
-                                            .withOpacity(0.7),
-                                        letterSpacing: 1.2,
-                                      ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "STATUS: COMPLETED",
+                                          style: TextStyle(
+                                            fontSize: 15.sp,
+                                            fontFamily: CustomFonts.bold,
+                                            color: AppColors.primaryDarkBlue
+                                                .withOpacity(0.7),
+                                            letterSpacing: 1.2,
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            print("Clicked");
+                                          },
+                                          child: Container(
+                                            height: 45,
+                                            width: 45,
+                                            decoration: BoxDecoration(
+                                              color: AppColors.primaryDarkBlue,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Icon(
+                                              Icons.access_time_filled,
+                                              size: 20.sp,
+                                              color: AppColors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
 
                                     SizedBox(height: 1.h),
@@ -677,41 +692,11 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
                                 ),
                               ),
                             ),
-                          ),
 
-                          Positioned(
-                            bottom: 2.h,
-                            right: 5.w,
-                            child: GestureDetector(
-                              onTap: () {
-                                print("Clicked");
-                              },
-                              child: Container(
-                                height: 45,
-                                width: 45,
-                                decoration: BoxDecoration(
-                                  color: AppColors.primaryDarkBlue,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.access_time,
-                                  size: 20.sp,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                       SizedBox(height: 3.h),
-                      CustomButton(
-                        title: 'POST A NEW JOB',
-                        onTap: () {
-                          Get.to(() => SubscriptionScreen());
-                        },
-                        backgroundColor: AppColors.primaryDarkBlue,
-                        textColor: AppColors.white,
-                      ),
+
 
                       SizedBox(height: 5.h),
                     ],
@@ -721,7 +706,16 @@ class _MyJobPostScreen1State extends State<MyJobPostScreen1> {
             ],
           ),
         ],
+
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+        },
+        backgroundColor: AppColors.primaryDarkBlue,
+        child: Icon(Icons.add, color: Colors.white),
+      ),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
     );
   }
 }

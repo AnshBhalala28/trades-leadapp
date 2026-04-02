@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/customDrawer.dart';
@@ -573,6 +574,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
     );
   }
   Widget _point(String text) {

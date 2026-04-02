@@ -6,6 +6,7 @@ import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/customDrawer.dart';
@@ -913,6 +914,7 @@ class _AvailableLeadScreenState extends State<AvailableLeadScreen> {
         backgroundColor: AppColors.primaryDarkBlue,
         child: Icon(Icons.add, color: Colors.white),
       ),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
     );
   }
 }

@@ -14,6 +14,7 @@ import 'package:tradesleadapp/ui/myJobPostScreen/view/myJobPostScreen.dart';
 import 'package:tradesleadapp/ui/subscription/view/subscriptionScreen.dart';
 import 'package:tradesleadapp/ui/theBlueChip/view/theBlueChip.dart';
 import 'package:tradesleadapp/utils/CustomAppBar1.dart';
+import 'package:tradesleadapp/utils/CustomBottomBar.dart';
 import 'package:tradesleadapp/utils/customAppBar.dart';
 import 'package:tradesleadapp/utils/customButton.dart';
 import 'package:tradesleadapp/utils/customDrawer.dart';
@@ -523,6 +524,7 @@ class _RequestQuoteScreenState extends State<RequestQuoteScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: CustomBottomBar(currentIndex: 0,),
     );
   }
 }
